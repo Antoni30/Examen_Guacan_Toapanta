@@ -9,7 +9,7 @@ Este proyecto contiene un dataset y un notebook (IPYNB) con varios algoritmos de
 3. `Frontend/`: Contiene formulario
 
 
-# Flask JSON Key Value API
+# Flask API LOCAL
 
 Esta es una API simple creada con Flask que recibe un JSON con caracterisiticas y devulve la predicion 
 
