@@ -2,3 +2,4 @@
 *.zip
 venv/
 adult.csv
+*/__pycache__/
