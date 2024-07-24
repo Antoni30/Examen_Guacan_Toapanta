@@ -69,3 +69,10 @@ Asegúrate de que la estructura de tu proyecto sea similar a la siguiente:
       ├── requirements.txt
       └── run.py
   ```
+
+## Recomendacion 
+Actualizar el pip del entorno virtual
+
+ ```sh
+      python.exe -m pip install --upgrade pip
+  ```
