@@ -1,19 +1,15 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
 import { Select } from './components/Select'
 import { InputNumber } from './components/InputNumber'
+import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
   const [predict, setPredict] = useState('Undefined')
 
   const handleSubmit = async (e) => {
     e.preventDefault()
     let data = Object.fromEntries(new FormData(e.target))
-    console.log(data)
-    isGreatherThan50k = await fetch("http://localhost:5000/predict",
+    let isGreatherThan50k = await fetch("http://localhost:5000/predict",
       {
         method: "POST",
         headers: {
@@ -62,10 +58,10 @@ function App() {
   ];
 
   return (
-    <div>
-      <form onSubmit={handleSubmit} id='form_predict'>
-        <legend>
-          Predicción del sueldo de trabajador
+    <div className='predict-ui'>
+      <form className='form-predict' onSubmit={handleSubmit} id='form_predict'>
+        <legend className='text-center'>
+          <h2>Predicción de Salario</h2>
         </legend>
         <InputNumber
           formName={"form_predict"}
@@ -145,6 +141,11 @@ function App() {
           labels={["yes", "no"]}
           values={[1, 0]}
         />
+        <InputNumber
+          formName={"form_predict"}
+          label={"Horas por semana"}
+          id={"hours_per_week"}
+        />
         <Select
           formName={"form_predict"}
           title={"Región"}
@@ -152,15 +153,10 @@ function App() {
           labels={country}
           values={country}
         />
-        <InputNumber
-          formName={"form_predict"}
-          label={"Horas por semana"}
-          id={"hours_per_week"}
-        />
         <button type='submit'>Enviar</button>
       </form>
       <p>
-        {predict}
+        El empleado percibe un salario de: {predict}
       </p>
     </div>
   )
