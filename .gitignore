@@ -1,3 +1,4 @@
 *.pickle
 *.zip
+venv/
 adult.csv
