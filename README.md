@@ -42,7 +42,10 @@ Esta es una API simple creada con Flask que recibe un JSON con caracterisiticas 
     ```sh
     pip install -r requirements.txt
     ```
-
+4. Ejecutar:
+    ```sh
+    python run.py
+    ```
 ## Configuración
 
 Asegúrate de que la estructura de tu proyecto sea similar a la siguiente:
